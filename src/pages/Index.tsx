@@ -5,6 +5,7 @@ import HeroSlider from '../components/HeroSlider';
 import AboutSection from '../components/AboutSection';
 import ProductsSection from '../components/ProductsSection';
 import PrincipalsSection from '../components/PrincipalsSection';
+import ClientsSection from '../components/ClientsSection';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <AboutSection />
       <ProductsSection />
       <PrincipalsSection />
+      <ClientsSection />
       <Footer />
     </div>
   );

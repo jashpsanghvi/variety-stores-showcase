@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white">
+    <footer id="footer" className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
-            <div className="flex items-center mb-4">
+            <Link to="/" className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
               <img 
-                src="/lovable-uploads/7aa83911-44d0-49ba-955e-1962bbce130b.png" 
+                src="/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png" 
                 alt="Variety Stores Logo" 
-                className="h-10 w-10 mr-3" 
+                className="h-16 w-16 mr-4" 
               />
-              <h3 className="text-xl font-semibold">Variety Stores</h3>
-            </div>
+              <h3 className="text-2xl font-bold">Variety Stores</h3>
+            </Link>
             <p className="text-gray-300 mb-6">
               Your trusted partner for quality industrial components. We provide electrical, electronic, and mechanical parts from leading manufacturers.
             </p>

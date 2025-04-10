@@ -28,50 +28,56 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-4 left-0 right-0 z-50 mx-auto w-[95%] rounded-xl transition-all duration-500",
+      "fixed top-6 left-0 right-0 z-50 mx-auto w-[95%] rounded-xl transition-all duration-500",
       scrolled 
-        ? "bg-white bg-opacity-95 shadow-lg py-3 backdrop-blur-sm" 
-        : "bg-transparent py-4"
+        ? "bg-white bg-opacity-85 shadow-lg py-3 backdrop-blur-sm" 
+        : "bg-white bg-opacity-75 py-4 shadow-md backdrop-blur-sm"
     )}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div className="flex items-center">
+        <Link to="/" className="flex items-center group">
           <img 
-            src="/lovable-uploads/7aa83911-44d0-49ba-955e-1962bbce130b.png" 
+            src="/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png" 
             alt="Variety Stores Logo" 
-            className="h-10 w-10 mr-3" 
+            className="h-12 w-12 mr-3 transition-transform group-hover:scale-105" 
           />
-          <h1 className="text-2xl font-bold" style={{ color: '#1c2e6b' }}>Variety Stores</h1>
-        </div>
+          <h1 className="text-3xl font-bold transition-colors group-hover:text-[#243a85]" style={{ color: '#1c2e6b' }}>Variety Stores</h1>
+        </Link>
         
         <div className="hidden md:flex space-x-6">
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-gray-700 hover:text-[#1c2e6b] font-medium transition-colors"
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             About Us
           </button>
           <button 
             onClick={() => scrollToSection('products')}
-            className="text-gray-700 hover:text-[#1c2e6b] font-medium transition-colors"
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             Products
           </button>
           <button 
             onClick={() => scrollToSection('principals')}
-            className="text-gray-700 hover:text-[#1c2e6b] font-medium transition-colors"
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             Our Principals
           </button>
-          <Link 
-            to="/contact"
-            className="text-gray-700 hover:text-[#1c2e6b] font-medium transition-colors"
+          <button 
+            onClick={() => scrollToSection('clients')}
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
+          >
+            Clients
+          </button>
+          <button 
+            onClick={() => scrollToSection('footer')}
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             Contact
-          </Link>
+          </button>
         </div>
         
         <div className="md:hidden">
-          <button className="text-gray-700">
+          <button className="text-gray-800">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>

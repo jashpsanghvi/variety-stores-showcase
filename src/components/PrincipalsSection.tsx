@@ -4,33 +4,27 @@ import React from 'react';
 const principals = [
   {
     name: "Siemens",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Siemens-logo.svg/2560px-Siemens-logo.svg.png",
-    description: "Global technology powerhouse focusing on electrification, automation and digitalization."
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Siemens-logo.svg/2560px-Siemens-logo.svg.png"
   },
   {
     name: "ABB",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/ABB_logo.svg/2560px-ABB_logo.svg.png",
-    description: "Leading supplier of industrial robots, machine automation and electrification solutions."
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/ABB_logo.svg/2560px-ABB_logo.svg.png"
   },
   {
     name: "Schneider Electric",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Schneider_Electric_2007.svg/1280px-Schneider_Electric_2007.svg.png",
-    description: "Global specialist in energy management and industrial automation."
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Schneider_Electric_2007.svg/1280px-Schneider_Electric_2007.svg.png"
   },
   {
     name: "Phoenix Contact",
-    logo: "https://seeklogo.com/images/P/phoenix-contact-logo-9D76E02C48-seeklogo.com.png",
-    description: "Manufacturer of industrial electrical and electronic technology."
+    logo: "https://seeklogo.com/images/P/phoenix-contact-logo-9D76E02C48-seeklogo.com.png"
   },
   {
     name: "Honeywell",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Honeywell_Logo.svg/2560px-Honeywell_Logo.svg.png",
-    description: "Provider of commercial and consumer products, engineering services and aerospace systems."
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Honeywell_Logo.svg/2560px-Honeywell_Logo.svg.png"
   },
   {
     name: "Omron",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/OMRON_Logo.svg/2560px-OMRON_Logo.svg.png",
-    description: "Manufacturer of automation components, sensing and control technologies."
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/OMRON_Logo.svg/2560px-OMRON_Logo.svg.png"
   }
 ];
 
@@ -46,18 +40,14 @@ const PrincipalsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center items-center gap-12">
           {principals.map((principal, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg overflow-hidden shadow-sm p-6 transition-all duration-300 hover:shadow-md flex flex-col items-center text-center">
-              <div className="h-20 flex items-center justify-center mb-6">
-                <img 
-                  src={principal.logo} 
-                  alt={`${principal.name} logo`} 
-                  className="max-h-full object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-[#1c2e6b] mb-2">{principal.name}</h3>
-              <p className="text-gray-600">{principal.description}</p>
+            <div key={index} className="w-36 h-24 md:w-48 md:h-32 flex items-center justify-center p-4 transition-all duration-300 hover:scale-105">
+              <img 
+                src={principal.logo} 
+                alt={`${principal.name} logo`} 
+                className="max-h-full max-w-full object-contain"
+              />
             </div>
           ))}
         </div>
