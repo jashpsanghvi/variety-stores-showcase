@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 import HeroSlider from '../components/HeroSlider';
 import AboutSection from '../components/AboutSection';
 import ProductsSection from '../components/ProductsSection';
-import ClientsSection from '../components/ClientsSection';
+import PrincipalsSection from '../components/PrincipalsSection';
 import Footer from '../components/Footer';
 
 const Index = () => {
@@ -14,7 +14,7 @@ const Index = () => {
       <HeroSlider />
       <AboutSection />
       <ProductsSection />
-      <ClientsSection />
+      <PrincipalsSection />
       <Footer />
     </div>
   );

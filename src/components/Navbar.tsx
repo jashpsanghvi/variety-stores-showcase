@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,33 +28,46 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
-      scrolled ? "bg-white shadow-md py-3" : "bg-transparent"
+      "fixed top-4 left-0 right-0 z-50 mx-auto w-[95%] rounded-xl transition-all duration-500",
+      scrolled 
+        ? "bg-white bg-opacity-95 shadow-lg py-3 backdrop-blur-sm" 
+        : "bg-transparent py-4"
     )}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-blue-600">Variety Stores</h1>
+          <img 
+            src="/lovable-uploads/7aa83911-44d0-49ba-955e-1962bbce130b.png" 
+            alt="Variety Stores Logo" 
+            className="h-10 w-10 mr-3" 
+          />
+          <h1 className="text-2xl font-bold" style={{ color: '#1c2e6b' }}>Variety Stores</h1>
         </div>
         
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-6">
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-gray-700 hover:text-blue-600 font-medium"
+            className="text-gray-700 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             About Us
           </button>
           <button 
             onClick={() => scrollToSection('products')}
-            className="text-gray-700 hover:text-blue-600 font-medium"
+            className="text-gray-700 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             Products
           </button>
           <button 
-            onClick={() => scrollToSection('clients')}
-            className="text-gray-700 hover:text-blue-600 font-medium"
+            onClick={() => scrollToSection('principals')}
+            className="text-gray-700 hover:text-[#1c2e6b] font-medium transition-colors"
           >
-            Clients
+            Our Principals
           </button>
+          <Link 
+            to="/contact"
+            className="text-gray-700 hover:text-[#1c2e6b] font-medium transition-colors"
+          >
+            Contact
+          </Link>
         </div>
         
         <div className="md:hidden">
