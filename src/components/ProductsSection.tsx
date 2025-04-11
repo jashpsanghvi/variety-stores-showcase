@@ -38,6 +38,11 @@ const products = [
 const ProductsSection = () => {
   const navigate = useNavigate();
 
+  const handleProductClick = (slug: string) => {
+    navigate(`/products/${slug}`);
+    window.scrollTo(0, 0); // Scroll to top when navigating
+  };
+
   return (
     <section id="products" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
@@ -49,23 +54,34 @@ const ProductsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
-              onClick={() => navigate(`/products/${product.slug}`)}
+              className="h-64 perspective-1000 cursor-pointer group"
+              onClick={() => handleProductClick(product.slug)}
             >
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={product.image} 
-                  alt={product.name} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#1c2e6b] mb-2">{product.name}</h3>
-                <p className="text-gray-600">{product.description}</p>
+              <div className="relative h-full w-full transition-transform duration-500 transform-style-3d group-hover:rotate-y-180">
+                {/* Front of card */}
+                <div className="absolute inset-0 backface-hidden">
+                  <div className="h-full w-full overflow-hidden rounded-md shadow-md">
+                    <img 
+                      src={product.image} 
+                      alt={product.name} 
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                      <h3 className="text-white text-xl font-bold p-4">{product.name}</h3>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Back of card */}
+                <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#1c2e6b] rounded-md text-white p-6 flex flex-col justify-center items-center text-center shadow-md">
+                  <h3 className="text-2xl font-bold mb-4">{product.name}</h3>
+                  <p>{product.description}</p>
+                  <span className="mt-4 inline-block border-b-2 border-white">Learn More</span>
+                </div>
               </div>
             </div>
           ))}
@@ -77,7 +93,7 @@ const ProductsSection = () => {
           </p>
           <button 
             onClick={() => navigate('/contact')} 
-            className="bg-[#1c2e6b] hover:bg-[#243a85] text-white py-3 px-8 rounded-md text-lg font-medium transition-colors duration-300"
+            className="bg-[#1c2e6b] hover:bg-[#243a85] text-white py-3 px-8 rounded-none text-lg font-medium transition-colors duration-300"
           >
             Request a Quote
           </button>

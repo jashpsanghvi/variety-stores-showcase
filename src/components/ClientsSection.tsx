@@ -40,9 +40,9 @@ const ClientsSection = () => {
           </p>
         </div>
         
-        <div className="flex flex-wrap justify-center items-center gap-12">
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {clients.map((client, index) => (
-            <div key={index} className="w-36 h-24 md:w-48 md:h-32 flex items-center justify-center p-4 bg-white rounded-lg shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
+            <div key={index} className="w-28 h-20 md:w-32 md:h-24 flex items-center justify-center p-3 bg-white rounded-md shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">
               <img 
                 src={client.logo} 
                 alt={`${client.name} logo`} 
