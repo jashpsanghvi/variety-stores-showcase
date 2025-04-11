@@ -4,20 +4,20 @@ import React, { useState, useEffect } from 'react';
 const slides = [
   {
     title: "Industrial Automation Solutions",
-    subtitle: "Since 1958: 65+ Years of Technical Excellence",
-    description: "Proud to be serving the industrial sector since the establishment of Rourkela Industrial Township. Our legacy of excellence continues with cutting-edge industrial components.",
+    subtitle: "Technical Excellence in Industrial Components",
+    description: "Proud to be serving the industrial sector with cutting-edge industrial components and reliable automation solutions.",
     image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
   },
   {
     title: "Technical Expertise & Support",
     subtitle: "Tailored solutions for your industry needs",
-    description: "Our team of experts understands the unique requirements of your industry and provides personalized support for over six decades.",
+    description: "Our team of experts understands the unique requirements of your industry and provides personalized support.",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
   },
   {
     title: "Complete Industrial Solutions",
     subtitle: "Electrical, electronic and mechanical components",
-    description: "From sensors to UPS systems, we offer a comprehensive range of components to meet all your industrial needs since 1958.",
+    description: "From sensors to UPS systems, we offer a comprehensive range of components to meet all your industrial needs.",
     image: "https://images.unsplash.com/photo-1519501487584-6c1c89accce4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
   }
 ];

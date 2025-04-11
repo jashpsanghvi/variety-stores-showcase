@@ -6,31 +6,31 @@ const products = [
   {
     name: "Sensors",
     description: "Precision sensors for industrial automation and control systems.",
-    image: "https://images.unsplash.com/photo-1597424216809-3ba9864aeb18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
     slug: "sensors"
   },
   {
     name: "Encoders",
     description: "High-quality rotary and linear encoders for position feedback.",
-    image: "https://images.unsplash.com/photo-1581093458791-9aba4fb463c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    image: "https://images.unsplash.com/photo-1581093198937-dfce492977ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
     slug: "encoders"
   },
   {
     name: "Limit Switches",
     description: "Reliable limit switches for safety and position detection.",
-    image: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
     slug: "limit-switches"
   },
   {
     name: "Cables",
     description: "Industrial cables and connectors for reliable data and power transmission.",
-    image: "https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    image: "https://images.unsplash.com/photo-1589384256650-2261e3136bf5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
     slug: "cables"
   },
   {
     name: "UPS",
     description: "Uninterruptible power supplies for critical industrial applications.",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
+    image: "https://images.unsplash.com/photo-1588627541420-fce3f661b779?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
     slug: "ups"
   }
 ];
@@ -54,11 +54,11 @@ const ProductsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           {products.map((product, index) => (
             <div 
               key={index} 
-              className="h-64 perspective-1000 cursor-pointer group"
+              className="h-52 perspective-1000 cursor-pointer group"
               onClick={() => handleProductClick(product.slug)}
             >
               <div className="relative h-full w-full transition-transform duration-500 transform-style-3d group-hover:rotate-y-180">
@@ -71,16 +71,16 @@ const ProductsSection = () => {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                      <h3 className="text-white text-xl font-bold p-4">{product.name}</h3>
+                      <h3 className="text-white text-lg font-bold p-3">{product.name}</h3>
                     </div>
                   </div>
                 </div>
                 
                 {/* Back of card */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#1c2e6b] rounded-md text-white p-6 flex flex-col justify-center items-center text-center shadow-md">
-                  <h3 className="text-2xl font-bold mb-4">{product.name}</h3>
-                  <p>{product.description}</p>
-                  <span className="mt-4 inline-block border-b-2 border-white">Learn More</span>
+                <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#1c2e6b] rounded-md text-white p-4 flex flex-col justify-center items-center text-center shadow-md">
+                  <h3 className="text-xl font-bold mb-2">{product.name}</h3>
+                  <p className="text-sm">{product.description}</p>
+                  <span className="mt-3 inline-block border-b-2 border-white text-sm">Learn More</span>
                 </div>
               </div>
             </div>

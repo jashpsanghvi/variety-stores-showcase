@@ -42,7 +42,7 @@ const PrincipalsSection = () => {
         
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {principals.map((principal, index) => (
-            <div key={index} className="w-28 h-20 md:w-32 md:h-24 flex items-center justify-center p-3 bg-gray-50 rounded-md transition-all duration-300 hover:shadow-md hover:scale-105">
+            <div key={index} className="w-24 h-16 md:w-28 md:h-20 flex items-center justify-center transition-all duration-300 hover:scale-110">
               <img 
                 src={principal.logo} 
                 alt={`${principal.name} logo`} 

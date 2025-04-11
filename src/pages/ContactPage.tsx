@@ -6,11 +6,18 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 const ContactPage = () => {
+  const navigate = useNavigate();
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Your message has been sent! We'll get back to you soon.");
+  };
+
+  const handleGoBack = () => {
+    navigate('/');
   };
 
   return (
@@ -104,55 +111,25 @@ const ContactPage = () => {
                   />
                 </div>
 
-                <div className="flex justify-center">
+                <div className="flex justify-between">
+                  <Button 
+                    type="button" 
+                    onClick={handleGoBack}
+                    variant="outline"
+                    className="border-[#1c2e6b] text-[#1c2e6b] hover:bg-[#1c2e6b] hover:text-white px-6 py-2 rounded-none text-lg font-medium"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                    Go Back
+                  </Button>
+                  
                   <Button 
                     type="submit" 
-                    className="bg-[#1c2e6b] hover:bg-[#243a85] text-white px-8 py-3 rounded-md text-lg font-medium"
+                    className="bg-[#1c2e6b] hover:bg-[#243a85] text-white px-8 py-3 rounded-none text-lg font-medium"
                   >
                     Send Message
                   </Button>
                 </div>
               </form>
-            </div>
-
-            <div className="mt-12 bg-gray-50 rounded-lg p-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#1c2e6b] text-white mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">Our Location</h3>
-                  <p className="text-gray-600">
-                    123 Industrial Avenue<br />
-                    Business District<br />
-                    Mumbai, 400001
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#1c2e6b] text-white mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                  <p className="text-gray-600">+91 9876543210</p>
-                </div>
-
-                <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#1c2e6b] text-white mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                  <p className="text-gray-600">info@varietystores.com</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
