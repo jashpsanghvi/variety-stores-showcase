@@ -1,37 +1,49 @@
 
 import React, { useState, useEffect } from 'react';
 
+// Updated slides with industrial theme images
 const slides = [
   {
     title: "Industrial Automation Solutions",
     subtitle: "Technical Excellence in Industrial Components",
     description: "Proud to be serving the industrial sector with cutting-edge industrial components and reliable automation solutions.",
-    image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+    image: "/src/assets/images/industrial-automation.jpg" // Path to image in src folder
   },
   {
     title: "Technical Expertise & Support",
     subtitle: "Tailored solutions for your industry needs",
     description: "Our team of experts understands the unique requirements of your industry and provides personalized support.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+    image: "/src/assets/images/industrial-electronics.jpg" // Path to image in src folder
   },
   {
     title: "Complete Industrial Solutions",
     subtitle: "Electrical, electronic and mechanical components",
     description: "From sensors to UPS systems, we offer a comprehensive range of components to meet all your industrial needs.",
-    image: "https://images.unsplash.com/photo-1519501487584-6c1c89accce4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+    image: "/src/assets/images/manufacturing-facility.jpg" // Path to image in src folder
   }
 ];
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [prevSlide, setPrevSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setPrevSlide(currentSlide);
+      setIsTransitioning(true);
       setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-    }, 5000);
+      
+      // Reset transition state after animation completes
+      const transitionTimeout = setTimeout(() => {
+        setIsTransitioning(false);
+      }, 1000); // Match this with the CSS transition duration
+      
+      return () => clearTimeout(transitionTimeout);
+    }, 5000); // 5 second interval between slides
     
     return () => clearInterval(interval);
-  }, []);
+  }, [currentSlide]);
 
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
@@ -42,8 +54,12 @@ const HeroSlider = () => {
       {slides.map((slide, index) => (
         <div 
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+            index === currentSlide 
+              ? 'opacity-100 transform scale-100' 
+              : index === prevSlide && isTransitioning
+                ? 'opacity-0 transform scale-105' 
+                : 'opacity-0 pointer-events-none'
           }`}
         >
           <div 

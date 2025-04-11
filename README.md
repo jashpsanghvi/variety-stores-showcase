@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
 
-## Project info
+# Variety Stores - Industrial Components Supplier Website
 
-**URL**: https://lovable.dev/projects/7377de82-5f80-43a0-9710-0ff4c3078583
+## Project Overview
 
-## How can I edit this code?
+This is a modern website for Variety Stores, a company specializing in industrial electrical, electronic, and mechanical components. The website showcases the company's products, principals, clients, and services.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Responsive Design**: Fully responsive layout that works across desktop, tablet, and mobile devices
+- **Modern UI**: Sleek, professional interface with smooth animations and transitions
+- **Interactive Product Showcase**: Flip card animations for product displays
+- **Company Information**: Sections for About Us, Products, Principals, and Clients
+- **Contact Form**: Easy-to-use contact form for customer inquiries
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7377de82-5f80-43a0-9710-0ff4c3078583) and start prompting.
+## Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Frontend Framework**: React with TypeScript
+- **Styling**: Tailwind CSS with custom animations
+- **UI Components**: shadcn/ui component library
+- **Routing**: React Router for seamless navigation
+- **State Management**: React Hooks for state management
 
-**Use your preferred IDE**
+## Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```
+src/
+├── assets/
+│   └── images/        # All website images
+├── components/        # Reusable UI components
+│   ├── ui/            # Base UI components from shadcn
+│   └── ...            # Custom components for sections
+├── pages/             # Page components
+├── lib/               # Utility functions
+└── hooks/             # Custom React hooks
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Development
 
-Follow these steps:
+To run this project locally:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project is ready for deployment. You can deploy it using:
 
-**Use GitHub Codespaces**
+```sh
+# Build for production
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## Credits
 
-This project is built with:
+- Logo and branding: Variety Stores
+- UI Design: Custom implementation based on modern design principles
+- Images: Custom created industrial-themed graphics
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## License
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7377de82-5f80-43a0-9710-0ff4c3078583) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+All rights reserved. This project is proprietary to Variety Stores.
