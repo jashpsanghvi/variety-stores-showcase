@@ -1,7 +1,7 @@
 
 import React from 'react';
 const Footer = () => {
-  return <footer id="footer" className="bg-[#1c2e6b] text-white">
+  return <footer id="footer" className="bg-[#1d3275] text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="md:pl-8">
+          <div className="md:pl-12 md:ml-8">
             <h3 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Contact Us</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">

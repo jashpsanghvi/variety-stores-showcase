@@ -5,35 +5,43 @@ import React from 'react';
 const clients = [
   {
     name: "NTPC",
-    logo: "/src/assets/images/clients/National_Thermal_Power_logo.svg"
+    logo: "/src/assets/images/clients/National_Thermal_Power_logo.svg",
+    size: "w-32 h-24" // Enlarged
   },
   {
     name: "NSPCL",
-    logo: "/src/assets/images/clients/NSPCL_logo.jpg"
+    logo: "/src/assets/images/clients/NSPCL_logo.jpg",
+    size: "w-36 h-24" // Larger for better visibility
   },
   {
     name: "SAIL",
-    logo: "/src/assets/images/clients/Steel_Authority_of_India_logo.svg.png"
+    logo: "/src/assets/images/clients/Steel_Authority_of_India_logo.svg.png",
+    size: "w-32 h-24" // Enlarged
   },
   {
     name: "Hindalco",
-    logo: "/src/assets/images/clients/Hindalco_Logo.svg.png"
+    logo: "/src/assets/images/clients/Hindalco_Logo.svg.png",
+    size: "w-32 h-24" // Enlarged
   },
   {
     name: "Powergrid",
-    logo: "/src/assets/images/clients/powergrid-logo-png_seeklogo-386972.png"
+    logo: "/src/assets/images/clients/powergrid-logo-png_seeklogo-386972.png",
+    size: "w-36 h-24" // Larger for better visibility
   },
   {
     name: "Dalmia",
-    logo: "/src/assets/images/clients/Dalmia-logo_Bharat-Limited-Colour.webp"
+    logo: "/src/assets/images/clients/Dalmia-logo_Bharat-Limited-Colour.webp",
+    size: "w-36 h-24" // Larger for better visibility
   },
   {
     name: "Generic1",
-    logo: "/src/assets/images/clients/1295545862838092b9854e092f7a8e6187af94087.webp"
+    logo: "/src/assets/images/clients/1295545862838092b9854e092f7a8e6187af94087.webp",
+    size: "w-32 h-24" // Enlarged
   },
   {
     name: "Generic2",
-    logo: "/src/assets/images/clients/unnamed.png"
+    logo: "/src/assets/images/clients/unnamed.png",
+    size: "w-32 h-24" // Enlarged
   }
 ];
 
@@ -51,7 +59,7 @@ const ClientsSection = () => {
         
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
           {clients.map((client, index) => (
-            <div key={index} className="w-24 h-16 md:w-28 md:h-20 flex items-center justify-center transition-all duration-300 hover:scale-110">
+            <div key={index} className={`${client.size} flex items-center justify-center transition-all duration-300 hover:scale-110`}>
               <img 
                 src={client.logo} 
                 alt={`${client.name} logo`} 
