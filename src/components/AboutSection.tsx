@@ -11,6 +11,21 @@ const AboutSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          {/* Image now on the left side */}
+          <div className="rounded-md overflow-hidden shadow-lg relative group">
+            <img 
+              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" 
+              alt="Industrial components warehouse" 
+              className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1c2e6b]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+              <div className="p-6">
+                <p className="text-white text-lg font-medium">Established in 1958 with the founding of Rourkela Industrial Township</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Text content now on the right side */}
           <div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Your Trusted Partner Since 1958</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
@@ -35,19 +50,6 @@ const AboutSection = () => {
               <div className="bg-white p-4 rounded-md shadow-sm border-l-4 border-[#1c2e6b]">
                 <h4 className="font-semibold text-gray-800 mb-2">Fast Delivery</h4>
                 <p className="text-gray-600 text-sm">Quick turnaround on all orders</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="rounded-md overflow-hidden shadow-lg relative group">
-            <img 
-              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" 
-              alt="Industrial components warehouse" 
-              className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1c2e6b]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-              <div className="p-6">
-                <p className="text-white text-lg font-medium">Over 65 years of industrial excellence</p>
               </div>
             </div>
           </div>

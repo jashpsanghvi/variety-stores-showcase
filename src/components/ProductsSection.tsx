@@ -1,50 +1,75 @@
 
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const products = [
-  {
-    name: "Sensors",
-    description: "Precision sensors for industrial automation and control systems.",
-    image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    slug: "sensors"
-  },
-  {
-    name: "Encoders",
-    description: "High-quality rotary and linear encoders for position feedback.",
-    image: "https://images.unsplash.com/photo-1581093198937-dfce492977ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    slug: "encoders"
-  },
-  {
-    name: "Limit Switches",
-    description: "Reliable limit switches for safety and position detection.",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    slug: "limit-switches"
-  },
-  {
-    name: "Cables",
-    description: "Industrial cables and connectors for reliable data and power transmission.",
-    image: "https://images.unsplash.com/photo-1589384256650-2261e3136bf5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    slug: "cables"
-  },
-  {
-    name: "UPS",
-    description: "Uninterruptible power supplies for critical industrial applications.",
-    image: "https://images.unsplash.com/photo-1588627541420-fce3f661b779?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80",
-    slug: "ups"
-  }
+// Product list data
+const productCategories = [
+  'VFD Drives',
+  'Sensors, Encoder & Allied Products',
+  'Materials Handling Safety Switches',
+  'Industrial Fans & Blowers',
+  'Plug & Socket',
+  'Cable Lugs',
+  'Limit Switch, Control & Signalling Switches',
+  'LT Switchgear',
+  'ESP Controllers',
+  'Cables & Aluminium Conductors',
+  'Junction Box & Panels',
+  'UPS',
+  'Industrial Battery',
+  'Motor Protection Device',
+  'Cable Jointing Kits',
+  'Insulating Materials',
+  'Vibration Motors',
+  'Crane Spares',
+  'Industrials Air Conditioning Spares',
+  'Other Elec. Items as per Drawings & Client\'s Requirements',
+  'Connectors',
+  'Thyristors, Diodes & Stacks',
+  'Clutches, Brakes & Thrustors',
+  'Bronze Industrial Valves & Cocks, Cast Iron Industrial Valves',
+  'Submersible & Centrifugal Pumps',
+  'Aloxide Paper Disc',
+  'Emery Paper'
+];
+
+// Product carousel images
+const productImages = [
+  '/src/assets/images/products/image2.jpg',
+  '/src/assets/images/products/dcb.jpg',
+  '/src/assets/images/products/conveyor-belt-sway-switch-500x500.jpg',
+  '/src/assets/images/products/dedicated-inverter.jpg',
+  '/src/assets/images/products/heavy-duty-counter-weight-operated-limit-switch.jpg',
+  '/src/assets/images/products/dual-master-controller-500x500.webp',
+  '/src/assets/images/products/electric-inverters-500x500.webp',
+  '/src/assets/images/products/hensel-de-9345-500x500.webp',
+  '/src/assets/images/products/hind-rectifiers-make-ace-4-controller-for-esp.jpg',
+  '/src/assets/images/products/industrial-plugs-500x500.webp',
+  '/src/assets/images/products/jai-balaji-limit-switch-500x500.webp',
+  '/src/assets/images/products/josts-2-ton-jotruk-four-wheel-industrial-platform-truck.jpg',
+  '/src/assets/images/products/mamfile_1883209_720Wx540H_c.png',
+  '/src/assets/images/products/phoenix-power-supply-500x500.webp',
+  '/src/assets/images/products/ring_type_lugs13.jpg'
 ];
 
 const ProductsSection = () => {
-  const navigate = useNavigate();
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  const nextSlide = () => {
+    setActiveIndex((current) => (current + 1) % productImages.length);
+  };
+  
+  const prevSlide = () => {
+    setActiveIndex((current) => (current - 1 + productImages.length) % productImages.length);
+  };
 
-  const handleProductClick = (slug: string) => {
-    navigate(`/products/${slug}`);
-    window.scrollTo(0, 0); // Scroll to top when navigating
+  // Function to get the index for the visible slides with wrap-around
+  const getVisibleIndex = (relativePosition: number) => {
+    return (activeIndex + relativePosition + productImages.length) % productImages.length;
   };
 
   return (
-    <section id="products" className="py-20 bg-gray-50">
+    <section id="products" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Products</h2>
@@ -54,49 +79,74 @@ const ProductsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-          {products.map((product, index) => (
-            <div 
-              key={index} 
-              className="h-52 perspective-1000 cursor-pointer group"
-              onClick={() => handleProductClick(product.slug)}
-            >
-              <div className="relative h-full w-full transition-transform duration-500 transform-style-3d group-hover:rotate-y-180">
-                {/* Front of card */}
-                <div className="absolute inset-0 backface-hidden">
-                  <div className="h-full w-full overflow-hidden rounded-md shadow-md">
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                      <h3 className="text-white text-lg font-bold p-3">{product.name}</h3>
-                    </div>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Product List */}
+          <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+            <h3 className="text-2xl font-semibold text-[#1c2e6b] mb-6">Our Product Range</h3>
+            <div className="columns-1 sm:columns-2 gap-6 text-gray-700">
+              <ul className="space-y-2 list-inside list-disc mb-4">
+                {productCategories.map((product, index) => (
+                  <li key={index} className="text-sm md:text-base">{product}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          
+          {/* Product Carousel */}
+          <div className="relative">
+            <div className="overflow-hidden relative h-[350px] rounded-lg">
+              <div className="relative h-full">
+                {/* Previous Slide (Visible partially) */}
+                <div 
+                  className="absolute top-0 left-[-15%] w-[30%] h-full flex items-center justify-center opacity-50 transform scale-90 z-10"
+                >
+                  <img 
+                    src={productImages[getVisibleIndex(-1)]} 
+                    alt="Previous product" 
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
                 
-                {/* Back of card */}
-                <div className="absolute inset-0 backface-hidden rotate-y-180 bg-[#1c2e6b] rounded-md text-white p-4 flex flex-col justify-center items-center text-center shadow-md">
-                  <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                  <p className="text-sm">{product.description}</p>
-                  <span className="mt-3 inline-block border-b-2 border-white text-sm">Learn More</span>
+                {/* Current Slide (Center, fully visible) */}
+                <div 
+                  className="absolute top-0 left-[15%] w-[70%] h-full flex items-center justify-center z-20 transition-all duration-500 ease-in-out"
+                >
+                  <img 
+                    src={productImages[activeIndex]} 
+                    alt="Current product" 
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                
+                {/* Next Slide (Visible partially) */}
+                <div 
+                  className="absolute top-0 right-[-15%] w-[30%] h-full flex items-center justify-center opacity-50 transform scale-90 z-10"
+                >
+                  <img 
+                    src={productImages[getVisibleIndex(1)]} 
+                    alt="Next product" 
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-8">
-            Can't find what you're looking for? Our extensive network of suppliers allows us to source virtually any industrial component you need.
-          </p>
-          <button 
-            onClick={() => navigate('/contact')} 
-            className="bg-[#1c2e6b] hover:bg-[#243a85] text-white py-3 px-8 rounded-none text-lg font-medium transition-colors duration-300"
-          >
-            Request a Quote
-          </button>
+            
+            {/* Navigation Buttons */}
+            <button 
+              onClick={prevSlide} 
+              className="absolute top-1/2 left-0 -translate-y-1/2 bg-[#1c2e6b] text-white rounded-full p-2 shadow-lg z-30 hover:bg-[#243a85] transition-colors"
+              aria-label="Previous product"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button 
+              onClick={nextSlide} 
+              className="absolute top-1/2 right-0 -translate-y-1/2 bg-[#1c2e6b] text-white rounded-full p-2 shadow-lg z-30 hover:bg-[#243a85] transition-colors"
+              aria-label="Next product"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -1,49 +1,49 @@
 
 import React, { useState, useEffect } from 'react';
 
-// Updated slides with industrial theme images
+// Updated slides with local images from src/assets/images/hero folder
 const slides = [
   {
     title: "Industrial Automation Solutions",
     subtitle: "Technical Excellence in Industrial Components",
     description: "Proud to be serving the industrial sector with cutting-edge industrial components and reliable automation solutions.",
-    image: "/src/assets/images/industrial-automation.jpg" // Path to image in src folder
+    image: "/src/assets/images/hero/pexels-kateryna-babaieva-1423213-3736102.jpg"
   },
   {
     title: "Technical Expertise & Support",
     subtitle: "Tailored solutions for your industry needs",
     description: "Our team of experts understands the unique requirements of your industry and provides personalized support.",
-    image: "/src/assets/images/industrial-electronics.jpg" // Path to image in src folder
+    image: "/src/assets/images/hero/pexels-pixabay-247763.jpg"
   },
   {
     title: "Complete Industrial Solutions",
     subtitle: "Electrical, electronic and mechanical components",
     description: "From sensors to UPS systems, we offer a comprehensive range of components to meet all your industrial needs.",
-    image: "/src/assets/images/manufacturing-facility.jpg" // Path to image in src folder
+    image: "/src/assets/images/hero/pexels-rezwan-1087083.jpg"
   }
 ];
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [prevSlide, setPrevSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPrevSlide(currentSlide);
       setIsTransitioning(true);
-      setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
       
+      setTimeout(() => {
+        setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+      }, 1000); // Delay the actual slide change for smoother transition
+
       // Reset transition state after animation completes
-      const transitionTimeout = setTimeout(() => {
+      setTimeout(() => {
         setIsTransitioning(false);
-      }, 1000); // Match this with the CSS transition duration
+      }, 2000);
       
-      return () => clearTimeout(transitionTimeout);
     }, 5000); // 5 second interval between slides
     
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, []);
 
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
@@ -54,16 +54,19 @@ const HeroSlider = () => {
       {slides.map((slide, index) => (
         <div 
           key={index}
-          className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+          className={`absolute inset-0 transition-all duration-2000 ease-in-out ${
             index === currentSlide 
-              ? 'opacity-100 transform scale-100' 
-              : index === prevSlide && isTransitioning
-                ? 'opacity-0 transform scale-105' 
-                : 'opacity-0 pointer-events-none'
+              ? isTransitioning 
+                ? 'opacity-100 transform scale-100 blur-none' 
+                : 'opacity-100 transform scale-100'
+              : 'opacity-0 transform scale-105 blur-sm'
           }`}
+          style={{ 
+            transitionDuration: '2000ms'
+          }}
         >
           <div 
-            className="absolute inset-0 bg-cover bg-center" 
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>

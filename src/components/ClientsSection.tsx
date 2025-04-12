@@ -1,36 +1,37 @@
 
 import React from 'react';
 
+// Using images from the src/assets/images/clients folder
 const clients = [
   {
-    name: "TechCorp Industries",
-    logo: "https://placehold.co/200x100/ffffff/1c2e6b?text=TechCorp"
+    name: "NTPC",
+    logo: "/src/assets/images/clients/National_Thermal_Power_logo.svg"
   },
   {
-    name: "Global Manufacturing",
-    logo: "https://placehold.co/200x100/ffffff/1c2e6b?text=GMC"
+    name: "NSPCL",
+    logo: "/src/assets/images/clients/NSPCL_logo.jpg"
   },
   {
-    name: "IndusTech Solutions",
-    logo: "https://placehold.co/200x100/ffffff/1c2e6b?text=IndusTech"
+    name: "SAIL",
+    logo: "/src/assets/images/clients/Steel_Authority_of_India_logo.svg.png"
   },
   {
-    name: "Power Systems Ltd",
-    logo: "https://placehold.co/200x100/ffffff/1c2e6b?text=PowerSys"
+    name: "Hindalco",
+    logo: "/src/assets/images/clients/Hindalco_Logo.svg.png"
   },
   {
-    name: "AutoMechanics Inc",
-    logo: "https://placehold.co/200x100/ffffff/1c2e6b?text=AMI"
+    name: "Powergrid",
+    logo: "/src/assets/images/clients/powergrid-logo-png_seeklogo-386972.png"
   },
   {
-    name: "Precision Engineering",
-    logo: "https://placehold.co/200x100/ffffff/1c2e6b?text=PE Group"
+    name: "Dalmia",
+    logo: "/src/assets/images/clients/Dalmia-logo_Bharat-Limited-Colour.webp"
   }
 ];
 
 const ClientsSection = () => {
   return (
-    <section id="clients" className="py-20 bg-gray-50">
+    <section id="clients" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Clients</h2>

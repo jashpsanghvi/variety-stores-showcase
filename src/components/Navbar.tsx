@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 
 const Navbar = () => {
@@ -46,14 +45,14 @@ const Navbar = () => {
         : "bg-white bg-opacity-70 py-3 shadow-md backdrop-blur-sm"
     )}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center group">
+        <div className="flex items-center group">
           <img 
             src="/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png" 
             alt="Variety Stores Logo" 
-            className="h-14 w-14 mr-3 transition-transform group-hover:scale-105" 
+            className="h-16 w-16 mr-3 transition-transform group-hover:scale-105" 
           />
           <h1 className="text-3xl font-extrabold transition-colors group-hover:text-[#243a85] tracking-tight" style={{ color: '#1c2e6b', fontFamily: "'Montserrat', sans-serif" }}>Variety Stores</h1>
-        </Link>
+        </div>
         
         <div className="hidden md:flex space-x-8">
           <button 

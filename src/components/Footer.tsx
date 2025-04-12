@@ -1,26 +1,24 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer id="footer" className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <Link to="/" className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
-              {/* Use original logo without filters */}
+            <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
+              {/* Use white colored logo */}
               <img 
-                src="/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png" 
+                src="/lovable-uploads/7aa83911-44d0-49ba-955e-1962bbce130b.png" 
                 alt="Variety Stores Logo" 
-                className="h-16 w-16 mr-4" 
+                className="h-16 w-16 mr-4 filter brightness-0 invert" 
               />
               <h3 className="text-2xl font-bold">Variety Stores</h3>
-            </Link>
+            </div>
             <p className="text-gray-300 mb-6">
               Your trusted partner for quality industrial components. We provide electrical, electronic, and mechanical parts from leading manufacturers.
             </p>
-            {/* Social media icons removed */}
           </div>
           
           <div>
@@ -42,25 +40,6 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 <p className="text-gray-300">info@varietystores.com</p>
               </div>
-            </div>
-          </div>
-          
-          <div>
-            <h3 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Business Hours</h3>
-            <div className="space-y-2">
-              <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-              <p className="text-gray-300">Saturday: 10:00 AM - 2:00 PM</p>
-              <p className="text-gray-300">Sunday: Closed</p>
-            </div>
-            <div className="mt-6">
-              <Link 
-                to="/contact" 
-                className="bg-[#1c2e6b] hover:bg-[#243a85] text-white py-2 px-4 rounded-none transition-colors duration-300 inline-flex items-center"
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                <span>Contact Us</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </Link>
             </div>
           </div>
         </div>

@@ -16,6 +16,13 @@ const Index = () => {
     link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap';
     document.head.appendChild(link);
     
+    // Add favicon
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.href = '/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png';
+    favicon.type = 'image/png';
+    document.head.appendChild(favicon);
+    
     // Add custom style for flip card animation
     const style = document.createElement('style');
     style.textContent = `
@@ -40,6 +47,7 @@ const Index = () => {
     return () => {
       document.head.removeChild(link);
       document.head.removeChild(style);
+      document.head.removeChild(favicon);
     };
   }, []);
 
