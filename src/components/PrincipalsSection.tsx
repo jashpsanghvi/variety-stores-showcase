@@ -38,6 +38,18 @@ const principals = [
   {
     name: "Legrand",
     logo: "/src/assets/images/principals/cropped-logo-removebg-preview-1.png"
+  },
+  {
+    name: "Voith",
+    logo: "/src/assets/images/principals/voi1s4xe5hgfhqqpullm.webp"
+  },
+  {
+    name: "Generic1",
+    logo: "/src/assets/images/principals/images.jpg"
+  },
+  {
+    name: "Generic2",
+    logo: "/src/assets/images/principals/images.png"
   }
 ];
 
@@ -46,7 +58,7 @@ const PrincipalsSection = () => {
     <section id="principals" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Principals</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Principals</h2>
           <div className="w-20 h-1 bg-[#1c2e6b] mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
             We partner with world-renowned manufacturers to bring you the highest quality industrial components and solutions.
@@ -59,7 +71,7 @@ const PrincipalsSection = () => {
               <img 
                 src={principal.logo} 
                 alt={`${principal.name} logo`} 
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain mix-blend-multiply"
               />
             </div>
           ))}

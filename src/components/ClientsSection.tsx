@@ -26,6 +26,14 @@ const clients = [
   {
     name: "Dalmia",
     logo: "/src/assets/images/clients/Dalmia-logo_Bharat-Limited-Colour.webp"
+  },
+  {
+    name: "Generic1",
+    logo: "/src/assets/images/clients/1295545862838092b9854e092f7a8e6187af94087.webp"
+  },
+  {
+    name: "Generic2",
+    logo: "/src/assets/images/clients/unnamed.png"
   }
 ];
 
@@ -47,7 +55,7 @@ const ClientsSection = () => {
               <img 
                 src={client.logo} 
                 alt={`${client.name} logo`} 
-                className="max-h-full max-w-full object-contain"
+                className="max-h-full max-w-full object-contain mix-blend-multiply"
               />
             </div>
           ))}

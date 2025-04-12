@@ -14,22 +14,22 @@ const AboutSection = () => {
           {/* Image now on the left side */}
           <div className="rounded-md overflow-hidden shadow-lg relative group">
             <img 
-              src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" 
-              alt="Industrial components warehouse" 
+              src="/lovable-uploads/1951df6e-38de-431b-b965-468ebadd45fc.png" 
+              alt="Industrial contractors reviewing plans" 
               className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1c2e6b]/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
               <div className="p-6">
-                <p className="text-white text-lg font-medium">Established in 1958 with the founding of Rourkela Industrial Township</p>
+                <p className="text-white text-lg font-medium">Established in 1957 with the founding of Rourkela Industrial Township</p>
               </div>
             </div>
           </div>
           
           {/* Text content now on the right side */}
           <div>
-            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Your Trusted Partner Since 1958</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-4">Your Trusted Partner Since 1957</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Established in 1958 with the founding of Rourkela Industrial Township, Variety Stores has grown to become a trusted supplier for businesses across the industry for over six decades.
+              Established in 1957 with the founding of Rourkela Industrial Township, Variety Stores has grown to become a trusted supplier for businesses across the industry for over six decades.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
               We pride ourselves on our technical expertise and ability to understand client requirements, ensuring you get the right components for your specific needs.
