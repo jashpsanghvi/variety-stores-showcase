@@ -1,19 +1,12 @@
-
 import React from 'react';
-
 const Footer = () => {
-  return (
-    <footer id="footer" className="bg-gray-800 text-white">
+  return <footer id="footer" className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
               {/* Use white colored logo */}
-              <img 
-                src="/lovable-uploads/7aa83911-44d0-49ba-955e-1962bbce130b.png" 
-                alt="Variety Stores Logo" 
-                className="h-16 w-16 mr-4 filter brightness-0 invert" 
-              />
+              <img alt="Variety Stores Logo" className="h-16 w-16 mr-4 filter brightness-0 invert" src="/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png" />
               <h3 className="text-2xl font-bold">Variety Stores</h3>
             </div>
             <p className="text-gray-300 mb-6">
@@ -48,8 +41,6 @@ const Footer = () => {
           <p className="text-gray-400">© {new Date().getFullYear()} Variety Stores. All rights reserved. <span className="text-gray-500">Serving industry since 1958</span></p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
