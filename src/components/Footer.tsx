@@ -3,8 +3,8 @@ import React from 'react';
 const Footer = () => {
   return <footer id="footer" className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* First quarter - Logo and description */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Left half - Logo and description */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
               {/* Use white colored logo */}
@@ -16,11 +16,7 @@ const Footer = () => {
             </p>
           </div>
           
-          {/* Second quarter - Empty */}
-          <div className="md:col-span-1">
-          </div>
-          
-          {/* Third quarter - Contact Us */}
+          {/* Right half - Contact Us */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Contact Us</h3>
             <div className="space-y-4">
@@ -42,10 +38,6 @@ const Footer = () => {
                 <p className="text-gray-300">storesvariety@gmail.com</p>
               </div>
             </div>
-          </div>
-          
-          {/* Fourth quarter - Empty */}
-          <div className="md:col-span-1">
           </div>
         </div>
         
