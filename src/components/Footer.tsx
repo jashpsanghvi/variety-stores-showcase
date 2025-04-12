@@ -1,21 +1,27 @@
 
 import React from 'react';
 const Footer = () => {
-  return <footer id="footer" className="bg-[#1d3275] text-white">
+  return <footer id="footer" className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* First quarter - Logo and description */}
+          <div className="md:col-span-1">
             <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
               {/* Use white colored logo */}
               <img alt="Variety Stores Logo" className="h-16 w-16 mr-4" src="/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png" />
               <h3 className="text-2xl font-bold">Variety Stores</h3>
             </div>
             <p className="text-gray-300 mb-6">
-              Your trusted partner for quality industrial components. We provide electrical, electronic, and mechanical parts from leading manufacturers.
+              Your trusted partner for quality industrial components since 1957. We provide electrical, electronic, and mechanical parts from leading manufacturers.
             </p>
           </div>
           
-          <div className="md:pl-12 md:ml-8">
+          {/* Second quarter - Empty */}
+          <div className="md:col-span-1">
+          </div>
+          
+          {/* Third quarter - Contact Us */}
+          <div className="md:col-span-1">
             <h3 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Contact Us</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -36,6 +42,10 @@ const Footer = () => {
                 <p className="text-gray-300">storesvariety@gmail.com</p>
               </div>
             </div>
+          </div>
+          
+          {/* Fourth quarter - Empty */}
+          <div className="md:col-span-1">
           </div>
         </div>
         

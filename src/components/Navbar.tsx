@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-6 left-0 right-0 z-50 mx-auto w-[95%] rounded-xl transition-all duration-500",
+      "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500",
       scrolled 
         ? "bg-white bg-opacity-85 shadow-lg py-2 backdrop-blur-sm" 
         : "bg-white bg-opacity-70 py-3 shadow-md backdrop-blur-sm"
@@ -100,7 +100,7 @@ const Navbar = () => {
 
       {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white bg-opacity-95 backdrop-blur-sm shadow-lg rounded-b-lg overflow-hidden mt-2 transition-all duration-300">
+        <div className="md:hidden bg-white bg-opacity-95 backdrop-blur-sm shadow-lg overflow-hidden transition-all duration-300">
           <div className="flex flex-col p-4 space-y-4">
             <button 
               onClick={() => scrollToSection('about')}

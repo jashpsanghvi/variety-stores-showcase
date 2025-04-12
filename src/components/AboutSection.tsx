@@ -29,10 +29,10 @@ const AboutSection = () => {
           <div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Your Trusted Partner Since 1957</h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Established in 1957 with the founding of Rourkela Industrial Township, Variety Stores has grown to become a trusted supplier for businesses across the industry for over six decades.
+              Established in 1957 under the dynamic leadership of Mr. Chunilal D Sanghvi and Mr. Chamanlal R Sanghvi as a partnership firm, Variety Stores has grown to become one of the leading suppliers of industrial components in the region.
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              We pride ourselves on our technical expertise and ability to understand client requirements, ensuring you get the right components for your specific needs.
+              We specialize in industrial electrical, electronics, mechanical and HVAC items, providing quality solutions for all your technical requirements including current collectors, industrial fans & blowers, cable accessories, switchgear, and much more.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white p-4 rounded-md shadow-sm border-l-4 border-[#1c2e6b]">

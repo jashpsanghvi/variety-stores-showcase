@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-// Using images from the src/assets/images/clients folder
+// Using all images from the src/assets/images/clients folder
 const clients = [
   {
     name: "NTPC",

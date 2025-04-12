@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-// Using images from the src/assets/images/principals folder
+// Using all images from the src/assets/images/principals folder
 const principals = [
   {
     name: "Hensel",

@@ -10,6 +10,15 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   useEffect(() => {
+    // Update document title for SEO
+    document.title = "Variety Stores - Industrial Electrical & Electronic Components Supplier Since 1957";
+    
+    // Add meta description for SEO
+    const metaDescription = document.createElement('meta');
+    metaDescription.name = 'description';
+    metaDescription.content = 'Established in 1957, Variety Stores is a leading supplier of industrial electrical, electronic, and mechanical components including VFD drives, switchgear, cable accessories, and more. Serving industry for over 65 years.';
+    document.head.appendChild(metaDescription);
+    
     // Add custom font from Google Fonts
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -48,6 +57,7 @@ const Index = () => {
       document.head.removeChild(link);
       document.head.removeChild(style);
       document.head.removeChild(favicon);
+      document.head.removeChild(metaDescription);
     };
   }, []);
 

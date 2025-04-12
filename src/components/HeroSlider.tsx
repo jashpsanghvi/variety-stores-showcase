@@ -1,24 +1,24 @@
 
 import React, { useState, useEffect } from 'react';
 
-// Updated slides with local images from src/assets/images/hero folder
+// Updated slides with local images from src/assets/images/hero folder and improved SEO-friendly content
 const slides = [
   {
-    title: "Industrial Automation Solutions",
-    subtitle: "Technical Excellence in Industrial Components",
-    description: "Proud to be serving the industrial sector with cutting-edge industrial components and reliable automation solutions.",
+    title: "Industrial Electrical & Electronics Solutions",
+    subtitle: "Serving industry since 1957",
+    description: "A leading supplier of industrial electrical, electronics, mechanical and HVAC components with over six decades of trusted service.",
     image: "/src/assets/images/hero/pexels-kateryna-babaieva-1423213-3736102.jpg"
   },
   {
-    title: "Technical Expertise & Support",
-    subtitle: "Tailored solutions for your industry needs",
-    description: "Our team of experts understands the unique requirements of your industry and provides personalized support.",
+    title: "Quality Industrial Components",
+    subtitle: "Established partnerships with leading manufacturers",
+    description: "Providing high-quality current collectors, industrial fans, cable accessories, switchgear, and more to meet your industrial requirements.",
     image: "/src/assets/images/hero/pexels-pixabay-247763.jpg"
   },
   {
     title: "Complete Industrial Solutions",
-    subtitle: "Electrical, electronic and mechanical components",
-    description: "From sensors to UPS systems, we offer a comprehensive range of components to meet all your industrial needs.",
+    subtitle: "Electrical, Electronic and Mechanical Components",
+    description: "From distribution boards to motor protection relays, we offer comprehensive solutions for industrial automation and control systems.",
     image: "/src/assets/images/hero/pexels-rezwan-1087083.jpg"
   }
 ];

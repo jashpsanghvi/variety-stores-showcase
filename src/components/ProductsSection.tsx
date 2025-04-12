@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Product list data
+// SEO-optimized product list data
 const productCategories = [
   'VFD Drives',
   'Sensors, Encoder & Allied Products',
@@ -75,13 +75,13 @@ const ProductsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Products</h2>
           <div className="w-20 h-1 bg-[#1c2e6b] mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            We offer a wide range of industrial components from trusted manufacturers, providing quality solutions for all your technical requirements.
+            We offer a wide range of industrial electrical, electronic and mechanical components from trusted manufacturers, providing quality solutions for all your technical requirements.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Product List */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          {/* Product List - 65% width (8/12 columns) */}
+          <div className="md:col-span-8 bg-gray-50 p-6 rounded-lg shadow-md">
             <h3 className="text-2xl font-semibold text-[#1c2e6b] mb-6">Our Product Range</h3>
             <div className="columns-1 sm:columns-2 gap-6 text-gray-700">
               <ul className="space-y-2 list-inside list-disc mb-4">
@@ -92,8 +92,8 @@ const ProductsSection = () => {
             </div>
           </div>
           
-          {/* Product Carousel */}
-          <div className="relative">
+          {/* Product Carousel - 35% width (4/12 columns) */}
+          <div className="md:col-span-4 relative">
             <div className="overflow-hidden relative h-[350px] rounded-lg">
               <div className="relative h-full">
                 {/* Previous Slide (Visible partially) */}
