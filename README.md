@@ -57,6 +57,7 @@ src/
 2. Install dependencies with `npm install`
 3. Run the development server with `npm run dev`
 4. Build for production with `npm run build`
+5. Deploy on web with `npm run deploy`
 
 ## Deployment
 
