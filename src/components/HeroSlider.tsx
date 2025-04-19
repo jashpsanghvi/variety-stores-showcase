@@ -1,25 +1,25 @@
 
 import React, { useState, useEffect } from 'react';
 
-// Updated slides with correct image paths for GitHub Pages
+// Updated slides with local images from src/assets/images/hero folder and improved SEO-friendly content
 const slides = [
   {
     title: "Industrial Electrical & Electronics Solutions",
     subtitle: "Serving industry since 1957",
     description: "A leading supplier of industrial electrical, electronics, mechanical and HVAC components with over six decades of trusted service.",
-    image: "/variety-stores-showcase/src/assets/images/hero/pexels-kateryna-babaieva-1423213-3736102.jpg"
+    image: "/src/assets/images/hero/pexels-kateryna-babaieva-1423213-3736102.jpg"
   },
   {
     title: "Quality Industrial Components",
     subtitle: "Established partnerships with leading manufacturers",
     description: "Providing high-quality current collectors, industrial fans, cable accessories, switchgear, and more to meet your industrial requirements.",
-    image: "/variety-stores-showcase/src/assets/images/hero/pexels-pixabay-247763.jpg"
+    image: "/src/assets/images/hero/pexels-pixabay-247763.jpg"
   },
   {
     title: "Complete Industrial Solutions",
     subtitle: "Electrical, Electronic and Mechanical Components",
     description: "From distribution boards to motor protection relays, we offer comprehensive solutions for industrial automation and control systems.",
-    image: "/variety-stores-showcase/src/assets/images/hero/pexels-rezwan-1087083.jpg"
+    image: "/src/assets/images/hero/pexels-rezwan-1087083.jpg"
   }
 ];
 
@@ -95,10 +95,10 @@ const HeroSlider = () => {
         ))}
       </div>
 
-      {/* Fixed floating Learn More button - adjusted for better mobile layout */}
+      {/* Fixed floating Learn More button */}
       <button
         onClick={scrollToAbout}
-        className="absolute bottom-24 right-10 md:right-10 bg-[#1c2e6b] hover:bg-[#243a85] text-white py-3 px-8 rounded-none text-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105"
+        className="absolute bottom-24 right-10 bg-[#1c2e6b] hover:bg-[#243a85] text-white py-3 px-8 rounded-none text-lg font-medium transition-all duration-300 hover:shadow-lg hover:scale-105"
       >
         Learn More
       </button>

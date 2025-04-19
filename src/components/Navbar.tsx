@@ -47,57 +47,41 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center group">
           <img 
-            src="/variety-stores-showcase/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png" 
+            src="/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png" 
             alt="Variety Stores Logo" 
-            className="h-28 w-28 mr-3 transition-transform group-hover:scale-105" 
-            style={{ transform: 'scale(1.75)' }}
+            className="h-16 w-16 mr-3 transition-transform group-hover:scale-105" 
           />
-          <h1 
-            className="text-3xl font-extrabold transition-colors group-hover:text-[#243a85] tracking-tight" 
-            style={{ 
-              color: '#1c2e6b', 
-              fontFamily: "'Montserrat', sans-serif",
-              transform: 'scale(1.75)',
-              marginLeft: '10px'
-            }}
-          >
-            Variety Stores
-          </h1>
+          <h1 className="text-3xl font-extrabold transition-colors group-hover:text-[#243a85] tracking-tight" style={{ color: '#1c2e6b', fontFamily: "'Montserrat', sans-serif" }}>Variety Stores</h1>
         </div>
         
         <div className="hidden md:flex space-x-8">
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors text-lg"
-            style={{ fontSize: '1.25rem' }}
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             About Us
           </button>
           <button 
             onClick={() => scrollToSection('products')}
-            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors text-lg"
-            style={{ fontSize: '1.25rem' }}
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             Products
           </button>
           <button 
             onClick={() => scrollToSection('principals')}
-            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors text-lg"
-            style={{ fontSize: '1.25rem' }}
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             Principals
           </button>
           <button 
             onClick={() => scrollToSection('clients')}
-            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors text-lg"
-            style={{ fontSize: '1.25rem' }}
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             Clients
           </button>
           <button 
             onClick={() => scrollToSection('footer')}
-            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors text-lg"
-            style={{ fontSize: '1.25rem' }}
+            className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors"
           >
             Contact
           </button>
@@ -120,36 +104,31 @@ const Navbar = () => {
           <div className="flex flex-col p-4 space-y-4">
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2 text-lg"
-              style={{ fontSize: '1.25rem' }}
+              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2"
             >
               About Us
             </button>
             <button 
               onClick={() => scrollToSection('products')}
-              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2 text-lg"
-              style={{ fontSize: '1.25rem' }}
+              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2"
             >
               Products
             </button>
             <button 
               onClick={() => scrollToSection('principals')}
-              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2 text-lg"
-              style={{ fontSize: '1.25rem' }}
+              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2"
             >
               Principals
             </button>
             <button 
               onClick={() => scrollToSection('clients')}
-              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2 text-lg"
-              style={{ fontSize: '1.25rem' }}
+              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2"
             >
               Clients
             </button>
             <button 
               onClick={() => scrollToSection('footer')}
-              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2 text-lg"
-              style={{ fontSize: '1.25rem' }}
+              className="text-gray-800 hover:text-[#1c2e6b] font-medium transition-colors py-2"
             >
               Contact
             </button>
