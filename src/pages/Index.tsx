@@ -25,10 +25,10 @@ const Index = () => {
     link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap';
     document.head.appendChild(link);
     
-    // Add favicon
+    // Add favicon with corrected path for GitHub Pages
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
-    favicon.href = '/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png';
+    favicon.href = import.meta.env.BASE_URL + '/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png';
     favicon.type = 'image/png';
     document.head.appendChild(favicon);
     

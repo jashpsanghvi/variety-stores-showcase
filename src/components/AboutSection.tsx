@@ -11,10 +11,10 @@ const AboutSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Image now on the left side */}
+          {/* Image now on the left side with updated path */}
           <div className="rounded-md overflow-hidden shadow-lg relative group">
             <img 
-              src="/lovable-uploads/1951df6e-38de-431b-b965-468ebadd45fc.png" 
+              src={import.meta.env.BASE_URL + "/lovable-uploads/1951df6e-38de-431b-b965-468ebadd45fc.png"} 
               alt="Industrial contractors reviewing plans" 
               className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
             />

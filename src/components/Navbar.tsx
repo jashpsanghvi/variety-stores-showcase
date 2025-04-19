@@ -47,7 +47,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center group">
           <img 
-            src="/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png" 
+            src={import.meta.env.BASE_URL + "/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png"} 
             alt="Variety Stores Logo" 
             className="h-16 w-16 mr-3 transition-transform group-hover:scale-105" 
           />

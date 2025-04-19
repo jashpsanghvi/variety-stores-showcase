@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
               {/* Use white colored logo */}
-              <img alt="Variety Stores Logo" className="h-16 w-16 mr-4" src="/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png" />
+              <img alt="Variety Stores Logo" className="h-16 w-16 mr-4" src={import.meta.env.BASE_URL + "/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png"} />
               <h3 className="text-2xl font-bold">Variety Stores</h3>
             </div>
             <p className="text-gray-300 mb-6">

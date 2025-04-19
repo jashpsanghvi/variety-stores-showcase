@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -33,23 +32,23 @@ const productCategories = [
   'Emery Paper'
 ];
 
-// Product carousel images
+// Product carousel images with updated paths
 const productImages = [
-  '/src/assets/images/products/image2.jpg',
-  '/src/assets/images/products/dcb.jpg',
-  '/src/assets/images/products/conveyor-belt-sway-switch-500x500.jpg',
-  '/src/assets/images/products/dedicated-inverter.jpg',
-  '/src/assets/images/products/heavy-duty-counter-weight-operated-limit-switch.jpg',
-  '/src/assets/images/products/dual-master-controller-500x500.webp',
-  '/src/assets/images/products/electric-inverters-500x500.webp',
-  '/src/assets/images/products/hensel-de-9345-500x500.webp',
-  '/src/assets/images/products/hind-rectifiers-make-ace-4-controller-for-esp.jpg',
-  '/src/assets/images/products/industrial-plugs-500x500.webp',
-  '/src/assets/images/products/jai-balaji-limit-switch-500x500.webp',
-  '/src/assets/images/products/josts-2-ton-jotruk-four-wheel-industrial-platform-truck.jpg',
-  '/src/assets/images/products/mamfile_1883209_720Wx540H_c.png',
-  '/src/assets/images/products/phoenix-power-supply-500x500.webp',
-  '/src/assets/images/products/ring_type_lugs13.jpg'
+  import.meta.env.BASE_URL + '/src/assets/images/products/image2.jpg',
+  import.meta.env.BASE_URL + '/src/assets/images/products/dcb.jpg',
+  import.meta.env.BASE_URL + '/src/assets/images/products/conveyor-belt-sway-switch-500x500.jpg',
+  import.meta.env.BASE_URL + '/src/assets/images/products/dedicated-inverter.jpg',
+  import.meta.env.BASE_URL + '/src/assets/images/products/heavy-duty-counter-weight-operated-limit-switch.jpg',
+  import.meta.env.BASE_URL + '/src/assets/images/products/dual-master-controller-500x500.webp',
+  import.meta.env.BASE_URL + '/src/assets/images/products/electric-inverters-500x500.webp',
+  import.meta.env.BASE_URL + '/src/assets/images/products/hensel-de-9345-500x500.webp',
+  import.meta.env.BASE_URL + '/src/assets/images/products/hind-rectifiers-make-ace-4-controller-for-esp.jpg',
+  import.meta.env.BASE_URL + '/src/assets/images/products/industrial-plugs-500x500.webp',
+  import.meta.env.BASE_URL + '/src/assets/images/products/jai-balaji-limit-switch-500x500.webp',
+  import.meta.env.BASE_URL + '/src/assets/images/products/josts-2-ton-jotruk-four-wheel-industrial-platform-truck.jpg',
+  import.meta.env.BASE_URL + '/src/assets/images/products/mamfile_1883209_720Wx540H_c.png',
+  import.meta.env.BASE_URL + '/src/assets/images/products/phoenix-power-supply-500x500.webp',
+  import.meta.env.BASE_URL + '/src/assets/images/products/ring_type_lugs13.jpg'
 ];
 
 const ProductsSection = () => {
