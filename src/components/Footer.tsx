@@ -9,9 +9,9 @@ const Footer = () => {
               <img alt="Variety Stores Logo" className="h-16 w-16 mr-4" src="/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png" />
               <h3 className="text-2xl font-bold">Variety Stores</h3>
             </div>
-            <div className="text-gray-300 mb-6 flex items-start space-x-3">
+            <div className="text-gray-300 mb-6 flex flex-col items-center text-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <p>
+              <p className="mt-2">
                 12, Rosy Shopping Centre<br />
                 Main Road<br />
                 Rourkela, 769001<br />
