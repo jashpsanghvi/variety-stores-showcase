@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { Menu } from 'lucide-react';
@@ -47,7 +46,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <div className="flex items-center group">
           <img 
-            src={import.meta.env.BASE_URL + "/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png"} 
+            src="/lovable-uploads/fd095255-4c31-4eac-a3ef-25dded2b560f.png" 
             alt="Variety Stores Logo" 
             className="h-16 w-16 mr-3 transition-transform group-hover:scale-105" 
           />
@@ -98,7 +97,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white bg-opacity-95 backdrop-blur-sm shadow-lg overflow-hidden transition-all duration-300">
           <div className="flex flex-col p-4 space-y-4">

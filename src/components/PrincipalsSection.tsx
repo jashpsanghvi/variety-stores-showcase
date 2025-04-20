@@ -1,67 +1,65 @@
-
 import React from 'react';
 
-// Using all images from the src/assets/images/principals folder with updated paths
 const principals = [
   {
     name: "Hensel",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/hensel_logo.png",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/hensel_logo.png",
+    size: "w-32 h-24"
   },
   {
     name: "Phoenix Contact",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/csm_Phoenix_Contact_767777eeeb.png",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/csm_Phoenix_Contact_767777eeeb.png",
+    size: "w-32 h-24"
   },
   {
     name: "Pepperl + Fuchs",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/pepperl-fuchs.png",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/pepperl-fuchs.png",
+    size: "w-32 h-24"
   },
   {
     name: "Rotex",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/rotex-1.png",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/rotex-1.png",
+    size: "w-32 h-24"
   },
   {
     name: "Hitachi",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/png-transparent-hitachi-construction-machinery-hitachi-chemical-company-ltd-otcmkts-hchmy-industry-hitachi-text-trademark-logo.png",
-    size: "w-36 h-24" // Larger for better visibility
+    logo: "/assets/images/principals/png-transparent-hitachi-construction-machinery-hitachi-chemical-company-ltd-otcmkts-hchmy-industry-hitachi-text-trademark-logo.png",
+    size: "w-36 h-24"
   },
   {
     name: "Jaibalaji",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/Jaibalaji-Dealer-Supplier.png",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/Jaibalaji-Dealer-Supplier.png",
+    size: "w-32 h-24"
   },
   {
     name: "Nangalwala",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/nangalwala-industries-1672488386.png",
-    size: "w-36 h-24" // Larger for better visibility
+    logo: "/assets/images/principals/nangalwala-industries-1672488386.png",
+    size: "w-36 h-24"
   },
   {
     name: "Schneider",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/Historie-600x450-3-2007-v2.jpg",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/Historie-600x450-3-2007-v2.jpg",
+    size: "w-32 h-24"
   },
   {
     name: "Legrand",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/cropped-logo-removebg-preview-1.png",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/cropped-logo-removebg-preview-1.png",
+    size: "w-32 h-24"
   },
   {
     name: "Voith",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/voi1s4xe5hgfhqqpullm.webp",
-    size: "w-36 h-24" // Larger for better visibility
+    logo: "/assets/images/principals/voi1s4xe5hgfhqqpullm.webp",
+    size: "w-36 h-24"
   },
   {
     name: "Generic1",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/images.jpg",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/images.jpg",
+    size: "w-32 h-24"
   },
   {
     name: "Generic2",
-    logo: import.meta.env.BASE_URL + "/assets/images/principals/images.png",
-    size: "w-32 h-24" // Enlarged
+    logo: "/assets/images/principals/images.png",
+    size: "w-32 h-24"
   }
 ];
 

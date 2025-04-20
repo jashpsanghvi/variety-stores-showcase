@@ -34,21 +34,21 @@ const productCategories = [
 
 // Product carousel images with updated paths
 const productImages = [
-  import.meta.env.BASE_URL + '/assets/images/products/image2.jpg',
-  import.meta.env.BASE_URL + '/assets/images/products/dcb.jpg',
-  import.meta.env.BASE_URL + '/assets/images/products/conveyor-belt-sway-switch-500x500.jpg',
-  import.meta.env.BASE_URL + '/assets/images/products/dedicated-inverter.jpg',
-  import.meta.env.BASE_URL + '/assets/images/products/heavy-duty-counter-weight-operated-limit-switch.jpg',
-  import.meta.env.BASE_URL + '/assets/images/products/dual-master-controller-500x500.webp',
-  import.meta.env.BASE_URL + '/assets/images/products/electric-inverters-500x500.webp',
-  import.meta.env.BASE_URL + '/assets/images/products/hensel-de-9345-500x500.webp',
-  import.meta.env.BASE_URL + '/assets/images/products/hind-rectifiers-make-ace-4-controller-for-esp.jpg',
-  import.meta.env.BASE_URL + '/assets/images/products/industrial-plugs-500x500.webp',
-  import.meta.env.BASE_URL + '/assets/images/products/jai-balaji-limit-switch-500x500.webp',
-  import.meta.env.BASE_URL + '/assets/images/products/josts-2-ton-jotruk-four-wheel-industrial-platform-truck.jpg',
-  import.meta.env.BASE_URL + '/assets/images/products/mamfile_1883209_720Wx540H_c.png',
-  import.meta.env.BASE_URL + '/assets/images/products/phoenix-power-supply-500x500.webp',
-  import.meta.env.BASE_URL + '/assets/images/products/ring_type_lugs13.jpg'
+  '/assets/images/products/image2.jpg',
+  '/assets/images/products/dcb.jpg',
+  '/assets/images/products/conveyor-belt-sway-switch-500x500.jpg',
+  '/assets/images/products/dedicated-inverter.jpg',
+  '/assets/images/products/heavy-duty-counter-weight-operated-limit-switch.jpg',
+  '/assets/images/products/dual-master-controller-500x500.webp',
+  '/assets/images/products/electric-inverters-500x500.webp',
+  '/assets/images/products/hensel-de-9345-500x500.webp',
+  '/assets/images/products/hind-rectifiers-make-ace-4-controller-for-esp.jpg',
+  '/assets/images/products/industrial-plugs-500x500.webp',
+  '/assets/images/products/jai-balaji-limit-switch-500x500.webp',
+  '/assets/images/products/josts-2-ton-jotruk-four-wheel-industrial-platform-truck.jpg',
+  '/assets/images/products/mamfile_1883209_720Wx540H_c.png',
+  '/assets/images/products/phoenix-power-supply-500x500.webp',
+  '/assets/images/products/ring_type_lugs13.jpg'
 ];
 
 const ProductsSection = () => {

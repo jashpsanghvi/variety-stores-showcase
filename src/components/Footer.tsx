@@ -1,22 +1,17 @@
-
 import React from 'react';
 const Footer = () => {
   return <footer id="footer" className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left half - Logo and description */}
           <div className="md:col-span-1">
             <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
-              {/* Use white colored logo */}
-              <img alt="Variety Stores Logo" className="h-16 w-16 mr-4" src={import.meta.env.BASE_URL + "/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png"} />
+              <img alt="Variety Stores Logo" className="h-16 w-16 mr-4" src="/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png" />
               <h3 className="text-2xl font-bold">Variety Stores</h3>
             </div>
             <p className="text-gray-300 mb-6">
               Your trusted partner for quality industrial components since 1957. We provide electrical, electronic, and mechanical parts from leading manufacturers.
             </p>
           </div>
-          
-          {/* Right half - Contact Us */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Contact Us</h3>
             <div className="space-y-4">
@@ -40,7 +35,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400">© {new Date().getFullYear()} Variety Stores. All rights reserved. <span className="text-gray-500">Serving industry since 1957</span></p>
         </div>
