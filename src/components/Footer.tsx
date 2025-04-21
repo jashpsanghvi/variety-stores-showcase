@@ -8,18 +8,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative">
           {/* LEFT COLUMN with white-inverted decorative background */}
           <div className="md:col-span-1 relative min-h-[220px] flex items-start">
-            <div 
-              className="absolute inset-0 w-full h-full pointer-events-none select-none"
-              aria-hidden="true"
-              style={{
-                backgroundImage: "url('/lovable-uploads/fa248b46-b89e-42b4-939f-6f64b0ddc804.png')",
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                backgroundSize: 'contain',
-                filter: 'invert(1) brightness(100)',
-                opacity: 1, // Changed from 0.15 to 1 (100%)
-              }}
-            />
             <div className="relative z-10 flex flex-col items-center w-full">
               <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
                 <img 
