@@ -15,8 +15,8 @@ const Footer = () => {
                 backgroundImage: "url('/lovable-uploads/6302fcc7-880c-4df2-b224-95ec265e32be.png')",
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                filter: 'invert(1) opacity(0.16)',
+                backgroundSize: 'contain',
+                filter: 'invert(1) opacity(0.25)',
                 zIndex: 0,
               }}
             />
