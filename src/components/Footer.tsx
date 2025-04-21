@@ -1,24 +1,37 @@
 
 import React from 'react';
+
 const Footer = () => {
-  return <footer id="footer" className="bg-gray-800 text-white">
+  return (
+    <footer id="footer" className="bg-gray-800 text-white">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="md:col-span-1">
-            <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
-              <img alt="Variety Stores Logo" className="h-16 w-16 mr-4" src="/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png" />
-              <h3 className="text-2xl font-bold">Variety Stores</h3>
-            </div>
-            <div className="text-gray-300 mb-6 flex items-start space-x-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <p>
-                12, Rosy Shopping Centre<br />
-                Main Road<br />
-                Rourkela, 769001<br />
-                Odisha
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative">
+          {/* LEFT COLUMN with white-inverted decorative background */}
+          <div className="md:col-span-1 relative min-h-[220px] flex items-start">
+            <div 
+              className="absolute inset-0 w-full h-full pointer-events-none select-none"
+              aria-hidden="true"
+              style={{
+                backgroundImage: "url('/lovable-uploads/6302fcc7-880c-4df2-b224-95ec265e32be.png')",
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                filter: 'invert(1) opacity(0.16)',
+                zIndex: 0,
+              }}
+            />
+            <div className="relative z-10 flex flex-col items-center w-full">
+              <div className="flex items-center mb-6 group hover:opacity-90 transition-opacity">
+                <img 
+                  alt="Variety Stores Logo" 
+                  className="h-16 w-16 mr-4" 
+                  src="/lovable-uploads/c8838c36-38ca-41af-b524-d882dd4c6701.png" 
+                />
+                <h3 className="text-2xl font-bold">Variety Stores</h3>
+              </div>
             </div>
           </div>
+          {/* RIGHT COLUMN with CONTACT INFO and ADDRESS */}
           <div className="md:col-span-1">
             <h3 className="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Contact Us</h3>
             <div className="space-y-4">
@@ -30,13 +43,25 @@ const Footer = () => {
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 <p className="text-gray-300">storesvariety@gmail.com</p>
               </div>
+              <div className="flex items-center space-x-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-1"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <p className="text-gray-300">
+                  12, Rosy Shopping Centre<br />
+                  Main Road<br />
+                  Rourkela, 769001<br />
+                  Odisha
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        {/* Bottom copyright section */}
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400">© {new Date().getFullYear()} Variety Stores. All rights reserved.</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
